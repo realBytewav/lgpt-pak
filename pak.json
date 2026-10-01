@@ -1,0 +1,20 @@
+{
+  "name": "LGPT",
+  "version": "v1.6.0-bacon20-tg5040.1",
+  "type": "TOOL",
+  "description": "Little Piggy Tracker (formerly LittleGPTracker) for the TrimUI Brick. A sample-based music tracker built for a d-pad, not a keyboard: the song / chain / phrase / instrument / table workflow of LSDj, which the Dirtywave M8 later took up. Eight channels, 128 chains, 128 phrases, sample and MIDI instruments, live play modes and real-time FX commands. Renders at a crisp 3x on the Brick's 1024x768 panel. Projects and the sample library live in /mnt/SDCARD/LGPT so they survive pak updates.",
+  "author": "Marc Nostromo (original), djdiskmachine (fork), tg5040 port",
+  "repo_url": "https://github.com/REPLACE_ME/lgpt-pak",
+  "release_filename": "LGPT.pak.zip",
+  "platforms": ["tg5040"],
+  "features": [
+    "Tracker workflow: song > chain > phrase > instrument > table, driven entirely from the d-pad",
+    "8 channels, 128 chains, 128 phrases, 32 tables",
+    "Sample instruments with filters, modulation tables and real-time FX commands",
+    "Live play modes: song, chain, phrase and live-queue triggering",
+    "Crisp 3x integer scaling to 960x720 on the Brick's 1024x768 screen, no blur",
+    "Projects and samplelib stored in /mnt/SDCARD/LGPT, outside the pak, so Pak Store updates never touch your songs",
+    "CPU governor pinned to performance and sleep inhibited while running, restored on exit"
+  ],
+  "screenshots": []
+}
