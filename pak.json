@@ -4,7 +4,7 @@
   "type": "TOOL",
   "description": "Little Piggy Tracker (formerly LittleGPTracker) for the TrimUI Brick. A sample-based music tracker built for a d-pad, not a keyboard: the song / chain / phrase / instrument / table workflow of LSDj, which the Dirtywave M8 later took up. Eight channels, 128 chains, 128 phrases, sample and MIDI instruments, live play modes and real-time FX commands. Renders at a crisp 3x on the Brick's 1024x768 panel. Projects and the sample library live in /mnt/SDCARD/LGPT so they survive pak updates.",
   "author": "Marc Nostromo (original), djdiskmachine (fork), tg5040 port",
-  "repo_url": "https://github.com/Bytewav2/lgpt-pak",
+  "repo_url": "https://github.com/realBytewav/lgpt-pak",
   "release_filename": "LGPT.pak.zip",
   "platforms": ["tg5040"],
   "features": [

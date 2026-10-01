@@ -45,7 +45,7 @@ them, and NextUI wants the menu button.
 ## Building
 
 The binary is cross-compiled from a fork of the upstream tracker that adds a
-`TG5040` platform target. See https://github.com/Bytewav2/LittleGPTracker (branch tg5040) for `shell.nix`,
+`TG5040` platform target. See https://github.com/realBytewav/LittleGPTracker (branch tg5040) for `shell.nix`,
 `tools/setup-toolchain.sh` and `projects/Makefile.TG5040`.
 
 ## Licence
