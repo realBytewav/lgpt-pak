@@ -1,4 +1,4 @@
-# LGPT.pak — Little Piggy Tracker for TrimUI Brick (NextUI)
+# LGPT.pak — Little Piggy Tracker for TrimUI handhelds (NextUI)
 
 A NextUI pak of [Little Piggy Tracker](https://github.com/djdiskmachine/LittleGPTracker)
 (formerly LittleGPTracker, a.k.a. "piggy"), the sample-based music tracker designed
@@ -10,7 +10,18 @@ Brick itself, with no extra hardware.
 
 ## Install
 
-Copy `LGPT.pak/` to `SD_ROOT/Tools/tg5040/`, then launch **LGPT** from the Tools menu.
+Copy `LGPT.pak/` to `SD_ROOT/Tools/<platform>/` (`tg5040` for Brick / Brick Pro /
+Smart Pro, `tg5050` for tg5050), then launch **LGPT** from the Tools menu.
+
+The pak ships a binary per platform and picks the right one from the directory it
+was installed into, so one download covers every supported device.
+
+| Device | Panel | Status |
+|---|---|---|
+| TrimUI Brick | 1024x768 | tested |
+| TrimUI Brick Pro | 1024x768 | untested, same build |
+| TrimUI Smart Pro | 1280x720 | untested, same build |
+| tg5050 | 1280x720 | untested, own build |
 
 ## Your data lives outside the pak
 
@@ -44,9 +55,13 @@ them, and NextUI wants the menu button.
 
 ## Building
 
-The binary is cross-compiled from a fork of the upstream tracker that adds a
-`TG5040` platform target. See https://github.com/realBytewav/LittleGPTracker (branch tg5040) for `shell.nix`,
-`tools/setup-toolchain.sh` and `projects/Makefile.TG5040`.
+The binaries are cross-compiled from a fork of the upstream tracker that adds
+`TG5040` and `TG5050` platform targets. See
+https://github.com/realBytewav/LittleGPTracker (branch `tg5040`) for `shell.nix`,
+`tools/setup-toolchain.sh` and `projects/Makefile.TG50*`.
+
+NextUI builds tg5040 and tg5050 from different toolchains and sysroots, so each
+needs its own binary; the source is identical for both.
 
 ## Licence
 

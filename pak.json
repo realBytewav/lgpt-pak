@@ -1,18 +1,22 @@
 {
   "name": "LGPT",
-  "version": "v1.6.0-bacon20-tg5040.1",
+  "version": "v1.6.0-bacon20-nextui.2",
   "type": "TOOL",
-  "description": "Little Piggy Tracker (formerly LittleGPTracker) for the TrimUI Brick. A sample-based music tracker built for a d-pad, not a keyboard: the song / chain / phrase / instrument / table workflow of LSDj, which the Dirtywave M8 later took up. Eight channels, 128 chains, 128 phrases, sample and MIDI instruments, live play modes and real-time FX commands. Renders at a crisp 3x on the Brick's 1024x768 panel. Projects and the sample library live in /mnt/SDCARD/LGPT so they survive pak updates.",
+  "description": "Little Piggy Tracker (formerly LittleGPTracker) for TrimUI handhelds. A sample-based music tracker built for a d-pad, not a keyboard: the song / chain / phrase / instrument / table workflow of LSDj, which the Dirtywave M8 later took up. Eight channels, 128 chains, 128 phrases, sample and MIDI instruments, live play modes and real-time FX commands. Runs on Brick, Brick Pro, Smart Pro and tg5050 - the pak ships a binary for each platform and picks the right one at launch. Projects and the sample library live in /mnt/SDCARD/LGPT so they survive pak updates.",
   "author": "Marc Nostromo (original), djdiskmachine (fork), tg5040 port",
   "repo_url": "https://github.com/realBytewav/lgpt-pak",
   "release_filename": "LGPT.pak.zip",
-  "platforms": ["tg5040"],
+  "platforms": [
+    "tg5040",
+    "tg5050"
+  ],
   "features": [
     "Tracker workflow: song > chain > phrase > instrument > table, driven entirely from the d-pad",
     "8 channels, 128 chains, 128 phrases, 32 tables",
     "Sample instruments with filters, modulation tables and real-time FX commands",
     "Live play modes: song, chain, phrase and live-queue triggering",
-    "Crisp 3x integer scaling to 960x720 on the Brick's 1024x768 screen, no blur",
+    "Crisp 3x integer scaling, no blur: 960x720 centred on a 1024x768 Brick, full height on a 1280x720 device",
+    "One pak for every supported device - separate tg5040 and tg5050 binaries, selected automatically at launch",
     "Projects and samplelib stored in /mnt/SDCARD/LGPT, outside the pak, so Pak Store updates never touch your songs",
     "CPU governor pinned to performance and sleep inhibited while running, restored on exit"
   ],

@@ -18,10 +18,11 @@
 	     1024x768, no border, 40 song rows at a time. Twice the song visible,
 	     but the text is noticeably smaller on a 3.2" screen.
 
-	     WARNING: do NOT use dense mode on a TrimUI Smart Pro (1280x720). It
-	     needs a 768-tall surface, so on a 720-tall panel the vertical anchor
-	     goes negative and the top and bottom rows are silently dropped. The
-	     3x default below is correct on every tg5040 device.
+	     WARNING: dense mode needs a 1024x768 panel, i.e. the Brick or Brick
+	     Pro ONLY. On a 720-tall device (Smart Pro, tg5050) it wants a 768-tall
+	     surface, the vertical anchor goes negative, and the top and bottom
+	     rows are silently dropped. The 3x default below is correct
+	     everywhere: 960x720 on a Brick, and exactly full height at 1280x720.
 
 	         <APPWIDTH value="512"/>
 	         <APPHEIGHT value="384"/>

@@ -5,7 +5,18 @@ set -e
 
 PAK_DIR="$(cd "$(dirname "$0")" && pwd)"
 PAK_NAME="$(basename "$PAK_DIR" .pak)"
-BINARY="lgpt-tg5040.elf"
+
+# One zip serves every supported device: the Pak Store unpacks it into
+# Tools/<platform>/, so the parent directory's name IS the platform. tg5040
+# (Brick / Brick Pro / Smart Pro) and tg5050 need different binaries - NextUI
+# builds them from different toolchains and sysroots - but share everything
+# else, including config.xml and the button map.
+PLATFORM="$(basename "$(dirname "$PAK_DIR")")"
+BINARY="lgpt-$PLATFORM.elf"
+if [ ! -f "$PAK_DIR/$BINARY" ]; then
+    echo "no binary for platform '$PLATFORM', falling back to tg5040"
+    BINARY="lgpt-tg5040.elf"
+fi
 
 # User data lives OUTSIDE the pak: the Pak Store wipes and re-unzips the pak
 # folder on update, which would otherwise take every song with it. This path
@@ -26,6 +37,8 @@ else
 fi
 echo "=== $PAK_NAME launch $(date 2>/dev/null) ==="
 echo "firmware: $(head -n1 /etc/version 2>/dev/null)"
+echo "platform: $PLATFORM"
+echo "binary  : $BINARY"
 echo "pak dir : $PAK_DIR"
 echo "data dir: $DATA_DIR"
 
